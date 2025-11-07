@@ -1,0 +1,44 @@
+# Site settings
+title: "Remova Inc. - SAP Basis Consulting"
+description: "Your SAP is fast, secure, and always available. Professional SAP Basis consulting, 24/7 support, and S/4HANA transformation services."
+url: "https://www.teamremova.org"
+baseurl: ""
+
+# Company information
+email: "contact@teamremova.org"
+company_name: "Remova Inc."
+company_tagline: "Your SAP is fast, secure, and always available"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - README.md
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+

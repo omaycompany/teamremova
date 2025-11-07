@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Root Cause Analysis (RCA) Report Template</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; position: relative; }
+        body::before { content: ''; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 400px; height: 120px; background-image: url('/assets/images/remova-logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 0.08; pointer-events: none; z-index: -1; }
+        h1 { color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #004d99; margin-top: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 5px; }
+        h3 { color: #333; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0066cc; color: white; width: 200px; }
+        .section { background-color: #f8f9fa; padding: 15px; margin: 20px 0; border-left: 4px solid #0066cc; }
+        .timeline-entry { margin: 10px 0; padding: 10px; background-color: #f8f9fa; }
+        @media print { body { margin: 0; } body::before { opacity: 0.05; } }
+    </style>
+</head>
+<body>
+    <h1>Root Cause Analysis (RCA) Report</h1>
+    
+    <h2>1. Incident Summary</h2>
+    <table>
+        <tr>
+            <th>Incident ID</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Incident Title</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Priority</th>
+            <td>☐ P1 - Critical  ☐ P2 - High  ☐ P3 - Medium  ☐ P4 - Low</td>
+        </tr>
+        <tr>
+            <th>Reported Date/Time</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Detected By</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Affected System(s)</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Affected Users/Processes</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Incident Owner</th>
+            <td></td>
+        </tr>
+    </table>
+    
+    <h2>2. Impact Assessment</h2>
+    <div class="section">
+        <h3>Business Impact</h3>
+        <p><strong>Describe the impact on business operations:</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Technical Impact</h3>
+        <p><strong>Describe the technical symptoms observed:</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Scope</h3>
+        <p><strong>Number of users affected:</strong> _____________</p>
+        <p><strong>Systems affected:</strong> _____________</p>
+        <p><strong>Duration of impact:</strong> _____________ (from _______ to _______)</p>
+    </div>
+    
+    <h2>3. Incident Timeline</h2>
+    <div class="timeline-entry">
+        <p><strong>Date/Time:</strong> _______________</p>
+        <p><strong>Event:</strong> Incident first detected</p>
+        <p><strong>Description:</strong> _________________________________________________________________</p>
+    </div>
+    
+    <div class="timeline-entry">
+        <p><strong>Date/Time:</strong> _______________</p>
+        <p><strong>Event:</strong> Initial response and triage</p>
+        <p><strong>Description:</strong> _________________________________________________________________</p>
+    </div>
+    
+    <div class="timeline-entry">
+        <p><strong>Date/Time:</strong> _______________</p>
+        <p><strong>Event:</strong> Investigation activities</p>
+        <p><strong>Description:</strong> _________________________________________________________________</p>
+    </div>
+    
+    <div class="timeline-entry">
+        <p><strong>Date/Time:</strong> _______________</p>
+        <p><strong>Event:</strong> Workaround or fix implemented</p>
+        <p><strong>Description:</strong> _________________________________________________________________</p>
+    </div>
+    
+    <div class="timeline-entry">
+        <p><strong>Date/Time:</strong> _______________</p>
+        <p><strong>Event:</strong> Service restored / Incident resolved</p>
+        <p><strong>Description:</strong> _________________________________________________________________</p>
+    </div>
+    
+    <h2>4. Root Cause Analysis</h2>
+    <div class="section">
+        <h3>Immediate Cause</h3>
+        <p><strong>What directly caused the incident?</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Root Cause</h3>
+        <p><strong>What underlying factors allowed the immediate cause to occur?</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Contributing Factors</h3>
+        <p><strong>What other factors contributed to the incident?</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Analysis Method Used</h3>
+        <p>☐ 5 Whys  ☐ Fishbone Diagram  ☐ Timeline Analysis  ☐ Other: _______________</p>
+    </div>
+    
+    <h2>5. Resolution Actions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action Taken</th>
+                <th>Date/Time</th>
+                <th>Performed By</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>6. Corrective Actions (Short-term)</h2>
+    <p><strong>Actions taken to prevent immediate recurrence:</strong></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Owner</th>
+                <th>Target Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>7. Preventive Actions (Long-term)</h2>
+    <p><strong>Actions to address root cause and prevent similar incidents:</strong></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Owner</th>
+                <th>Target Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>8. Lessons Learned</h2>
+    <div class="section">
+        <h3>What Went Well</h3>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>What Could Be Improved</h3>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Knowledge Base Update</h3>
+        <p><strong>Has this solution been added to the knowledge base?</strong> ☐ Yes  ☐ No</p>
+        <p><strong>KB Article ID:</strong> _______________</p>
+    </div>
+    
+    <h2>9. Approvals</h2>
+    <table>
+        <tr>
+            <th>Prepared By</th>
+            <td>Name: ____________________  Signature: ____________________  Date: __________</td>
+        </tr>
+        <tr>
+            <th>Reviewed By</th>
+            <td>Name: ____________________  Signature: ____________________  Date: __________</td>
+        </tr>
+        <tr>
+            <th>Approved By</th>
+            <td>Name: ____________________  Signature: ____________________  Date: __________</td>
+        </tr>
+    </table>
+    
+    <p style="margin-top: 40px; font-size: 12px; color: #666;">
+        <strong>Remova Inc.</strong> | www.teamremova.org | contact@teamremova.org<br>
+        This template is provided as a guide. Adapt as needed for your specific requirements.
+    </p>
+</body>
+</html>
+

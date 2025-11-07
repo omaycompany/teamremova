@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disaster Recovery Runbook Skeleton</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; position: relative; }
+        body::before { content: ''; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 400px; height: 120px; background-image: url('/assets/images/remova-logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 0.08; pointer-events: none; z-index: -1; }
+        h1 { color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #004d99; margin-top: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 5px; }
+        h3 { color: #333; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0066cc; color: white; }
+        .section { background-color: #f8f9fa; padding: 15px; margin: 20px 0; border-left: 4px solid #0066cc; }
+        .critical { background-color: #fff3cd; padding: 10px; border-left: 4px solid #ffc107; margin: 10px 0; }
+        .step { background-color: #f8f9fa; padding: 10px; margin: 10px 0; border-left: 3px solid #0066cc; }
+        @media print { body { margin: 0; } body::before { opacity: 0.05; } }
+    </style>
+</head>
+<body>
+    <h1>Disaster Recovery Runbook</h1>
+    
+    <div class="critical">
+        <strong>⚠ CRITICAL DOCUMENT</strong><br>
+        This runbook contains procedures for recovering SAP systems in a disaster scenario. Keep this document accessible and up-to-date. Review and test annually.
+    </div>
+    
+    <h2>1. Document Control</h2>
+    <table>
+        <tr>
+            <th>Document Version</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Last Updated</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Updated By</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Next Review Date</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Last Test Date</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Test Result</th>
+            <td>☐ Successful  ☐ Partial  ☐ Failed  ☐ Not Tested</td>
+        </tr>
+    </table>
+    
+    <h2>2. Recovery Objectives</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>System</th>
+                <th>Criticality</th>
+                <th>RPO</th>
+                <th>RTO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PRD (Production)</td>
+                <td>Critical</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>QAS (Quality Assurance)</td>
+                <td>Important</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DEV (Development)</td>
+                <td>Standard</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p><strong>RPO (Recovery Point Objective):</strong> Maximum acceptable data loss<br>
+    <strong>RTO (Recovery Time Objective):</strong> Maximum acceptable downtime</p>
+    
+    <h2>3. Emergency Contact List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Name</th>
+                <th>Primary Phone</th>
+                <th>Alternate Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Incident Commander</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SAP Basis Lead</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Database Administrator</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Infrastructure Lead</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Network Administrator</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Business Sponsor</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Communications Lead</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Vendor Contacts</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Vendor</th>
+                <th>Service</th>
+                <th>Contact</th>
+                <th>Phone</th>
+                <th>Support Portal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SAP</td>
+                <td>Application Support</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Database Vendor</td>
+                <td>Database Support</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Infrastructure Provider</td>
+                <td>Hardware/Cloud</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>4. Disaster Scenarios</h2>
+    <div class="section">
+        <p>This runbook covers the following disaster scenarios:</p>
+        <ul>
+            <li><strong>Scenario 1:</strong> Complete site failure (datacenter outage)</li>
+            <li><strong>Scenario 2:</strong> Server hardware failure</li>
+            <li><strong>Scenario 3:</strong> Storage failure or data corruption</li>
+            <li><strong>Scenario 4:</strong> Ransomware or cyber attack</li>
+            <li><strong>Scenario 5:</strong> Network connectivity failure</li>
+            <li><strong>Scenario 6:</strong> Application corruption requiring restore</li>
+        </ul>
+    </div>
+    
+    <h2>5. System Dependencies</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>SAP System</th>
+                <th>Dependencies</th>
+                <th>Recovery Sequence</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Production SAP</td>
+                <td>
+                    <ul>
+                        <li>Database server</li>
+                        <li>Storage subsystem</li>
+                        <li>Network connectivity</li>
+                        <li>Active Directory</li>
+                        <li>_______________</li>
+                    </ul>
+                </td>
+                <td>Priority 1</td>
+            </tr>
+            <tr>
+                <td>Interfaces</td>
+                <td>
+                    <ul>
+                        <li>_______________</li>
+                        <li>_______________</li>
+                    </ul>
+                </td>
+                <td>Priority 2</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>6. Backup Information</h2>
+    <table>
+        <tr>
+            <th>Backup Type</th>
+            <td>☐ Daily Full  ☐ Full + Incremental  ☐ Other: _______________</td>
+        </tr>
+        <tr>
+            <th>Backup Schedule</th>
+            <td>Daily at _______________ (time zone: _______________)</td>
+        </tr>
+        <tr>
+            <th>Backup Tool</th>
+            <td>_______________ (e.g., BR*Tools, native DB backup, third-party)</td>
+        </tr>
+        <tr>
+            <th>Backup Location</th>
+            <td>
+                <p>Primary: _______________</p>
+                <p>Off-site: _______________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Retention Period</th>
+            <td>
+                <p>Daily: _____ days</p>
+                <p>Weekly: _____ weeks</p>
+                <p>Monthly: _____ months</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Backup Catalog Location</th>
+            <td>_______________</td>
+        </tr>
+    </table>
+    
+    <h2>7. Recovery Procedures</h2>
+    
+    <h3>7.1 Initial Assessment</h3>
+    <div class="step">
+        <p><strong>Step 1:</strong> Declare disaster and activate incident commander</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Contact incident commander via phone</li>
+            <li>Describe the situation and impact</li>
+            <li>Document time of disaster declaration: _______________</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <p><strong>Step 2:</strong> Assemble recovery team</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Incident commander contacts all team members from contact list</li>
+            <li>Establish conference bridge: _______________</li>
+            <li>Set up status communication channel (email/Slack/Teams)</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <p><strong>Step 3:</strong> Assess situation and determine recovery strategy</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Identify which scenario applies (see Section 4)</li>
+            <li>Determine extent of damage or data loss</li>
+            <li>Identify last known good backup</li>
+            <li>Estimate recovery time based on RTO targets</li>
+            <li>Make go/no-go decision on DR activation</li>
+        </ul>
+    </div>
+    
+    <h3>7.2 Infrastructure Recovery</h3>
+    <div class="step">
+        <p><strong>Step 4:</strong> Prepare recovery infrastructure</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>If using DR site: Power on and verify infrastructure</li>
+            <li>If rebuilding: Provision servers per specifications below</li>
+            <li>Verify network connectivity and firewall rules</li>
+            <li>Verify storage capacity availability</li>
+        </ul>
+        
+        <p><strong>Server Specifications:</strong></p>
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Application Server</td>
+                <td>CPU: _____ Memory: _____ Storage: _____</td>
+            </tr>
+            <tr>
+                <td>Database Server</td>
+                <td>CPU: _____ Memory: _____ Storage: _____</td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3>7.3 Database Recovery</h3>
+    <div class="step">
+        <p><strong>Step 5:</strong> Restore database</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Locate most recent full backup</li>
+            <li>Verify backup integrity</li>
+            <li>Restore database using: _______________ (command/tool)</li>
+            <li>Apply log files if available to minimize data loss</li>
+            <li>Verify database consistency</li>
+        </ul>
+        
+        <p><strong>Database Restore Commands:</strong></p>
+        <p style="background-color: #f8f9fa; padding: 10px; font-family: monospace;">
+            _________________________________________________________________________<br>
+            _________________________________________________________________________<br>
+            _________________________________________________________________________
+        </p>
+        
+        <p><strong>Expected Duration:</strong> _____ hours</p>
+    </div>
+    
+    <h3>7.4 SAP Application Recovery</h3>
+    <div class="step">
+        <p><strong>Step 6:</strong> Recover SAP application layer</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Update SAP profiles with current hostnames/IP addresses</li>
+            <li>Update database connection parameters</li>
+            <li>Start SAP instances in order: CI → Dialog → Batch</li>
+            <li>Verify instance startup (sapcontrol -nr XX -function GetProcessList)</li>
+            <li>Check system log (SM21) for errors</li>
+        </ul>
+        
+        <p><strong>SAP Start Commands:</strong></p>
+        <p style="background-color: #f8f9fa; padding: 10px; font-family: monospace;">
+            startsap r3<br>
+            (or specific commands for your environment)
+        </p>
+    </div>
+    
+    <h3>7.5 Validation</h3>
+    <div class="step">
+        <p><strong>Step 7:</strong> Validate system functionality</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Test user login (transaction SU01)</li>
+            <li>Test critical transactions: _______________</li>
+            <li>Verify batch job scheduling</li>
+            <li>Test interface connectivity</li>
+            <li>Run consistency checks (transaction DBACOCKPIT)</li>
+            <li>Generate test transaction to confirm write capability</li>
+        </ul>
+        
+        <p><strong>Critical Transactions to Test:</strong></p>
+        <ol>
+            <li>_______________ (e.g., VA01 - Create Sales Order)</li>
+            <li>_______________ (e.g., ME21N - Create Purchase Order)</li>
+            <li>_______________</li>
+            <li>_______________</li>
+        </ol>
+    </div>
+    
+    <h3>7.6 Business Validation</h3>
+    <div class="step">
+        <p><strong>Step 8:</strong> Business acceptance testing</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Contact business process owners</li>
+            <li>Conduct User Acceptance Testing (UAT)</li>
+            <li>Verify data accuracy for critical business objects</li>
+            <li>Confirm acceptable data loss window</li>
+            <li>Obtain business sign-off to resume operations</li>
+        </ul>
+    </div>
+    
+    <h3>7.7 Restore Operations</h3>
+    <div class="step">
+        <p><strong>Step 9:</strong> Resume normal operations</p>
+        <p><em>Actions:</em></p>
+        <ul>
+            <li>Re-enable batch jobs</li>
+            <li>Re-enable interfaces</li>
+            <li>Notify all users that system is available</li>
+            <li>Monitor system performance and logs closely</li>
+            <li>Document actual recovery time achieved</li>
+        </ul>
+    </div>
+    
+    <h2>8. Post-Recovery Activities</h2>
+    <div class="section">
+        <h3>Immediate (Within 24 hours)</h3>
+        <ul>
+            <li>Conduct hot wash meeting with recovery team</li>
+            <li>Document what happened and recovery actions taken</li>
+            <li>Identify any procedure gaps or issues</li>
+            <li>Ensure backup jobs are running successfully</li>
+        </ul>
+        
+        <h3>Short-term (Within 1 week)</h3>
+        <ul>
+            <li>Prepare incident report for management</li>
+            <li>Conduct root cause analysis if applicable</li>
+            <li>Update DR runbook with lessons learned</li>
+            <li>Brief all stakeholders on recovery outcome</li>
+        </ul>
+        
+        <h3>Long-term (Within 1 month)</h3>
+        <ul>
+            <li>Implement corrective actions from RCA</li>
+            <li>Review and update RPO/RTO targets if needed</li>
+            <li>Update disaster recovery strategy if warranted</li>
+            <li>Schedule follow-up DR test</li>
+        </ul>
+    </div>
+    
+    <h2>9. Recovery Checklist</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Step</th>
+                <th>Action</th>
+                <th>Owner</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Declare disaster</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Assemble team</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Assess situation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Prepare infrastructure</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Restore database</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Recover SAP application</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Validate system</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Business validation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Resume operations</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>☐</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p><strong>Total Recovery Time:</strong> _____ hours (Target RTO: _____ hours)</p>
+    
+    <p style="margin-top: 40px; font-size: 12px; color: #666;">
+        <strong>Remova Inc.</strong> | www.teamremova.org | contact@teamremova.org<br>
+        This template is provided as a guide. Customize with your specific system details, commands, and procedures.
+    </p>
+</body>
+</html>
+

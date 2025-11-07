@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="service-header">
+    <div class="container">
+        <div class="service-header-content">
+            <div class="service-header-text">
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}
+                <p class="subtitle">{{ page.subtitle }}</p>
+                {% endif %}
+            </div>
+            <div class="service-header-image">
+                {% if page.slug %}
+                <img src="{{ '/assets/images/service-' | append: page.slug | append: '.png' | relative_url }}" alt="{{ page.title }}" class="service-visual">
+                {% else %}
+                <div class="image-placeholder" data-image="service-{{ page.slug }}">
+                    <span>Service Visual</span>
+                    <small>Recommend: 500x400px</small>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service-content">
+    <div class="container">
+        {{ content }}
+        
+        {% if page.cta_text and page.cta_email %}
+        <div class="service-cta">
+            {% include cta.html text=page.cta_text email=page.cta_email subject=page.cta_subject %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+

@@ -1,0 +1,251 @@
+---
+layout: service
+title: "Security & Compliance (Authorizations, Backup/DR)"
+subtitle: "Authorization management, backup policies, DR planning, and audit preparation"
+slug: "security-compliance"
+cta_text: "Get a Compliance Assessment"
+cta_email: "notifications@removateam.org"
+cta_subject: "Security & Compliance Assessment Request"
+---
+
+<div class="service-section">
+    <h2>What We Do</h2>
+    <ul>
+        <li>SAP authorization design and role management</li>
+        <li>Segregation of Duties (SoD) analysis and remediation</li>
+        <li>Security audit and vulnerability assessment</li>
+        <li>Backup policy design and verification</li>
+        <li>Disaster recovery planning and testing</li>
+        <li>Compliance documentation (SOX, GDPR, HIPAA, etc.)</li>
+        <li>Audit trail configuration and monitoring</li>
+        <li>Security patch management</li>
+    </ul>
+</div>
+
+<div class="service-section">
+    <h2>Why It Matters</h2>
+    <p>Security and compliance are critical for business continuity and regulatory requirements:</p>
+    <ul>
+        <li><strong>Data Protection:</strong> SAP systems contain sensitive business and customer data requiring protection</li>
+        <li><strong>Regulatory Compliance:</strong> Failure to meet audit requirements results in fines and business restrictions</li>
+        <li><strong>Business Continuity:</strong> Inadequate backup/DR plans lead to extended outages and data loss</li>
+        <li><strong>Fraud Prevention:</strong> Proper authorization controls prevent unauthorized transactions</li>
+        <li><strong>Audit Costs:</strong> Poor documentation increases audit effort and external auditor fees</li>
+        <li><strong>Reputation Risk:</strong> Security breaches damage customer trust and brand value</li>
+    </ul>
+</div>
+
+<div class="service-section">
+    <h2>How We Do It</h2>
+    <h3>Authorization Management</h3>
+    <h4>Step 1: Current State Analysis</h4>
+    <ul>
+        <li>Review existing roles and authorization assignments</li>
+        <li>Identify users with excessive privileges</li>
+        <li>Document authorization concept and naming conventions</li>
+        <li>Analyze custom authorization objects</li>
+    </ul>
+    
+    <h4>Step 2: Segregation of Duties (SoD)</h4>
+    <ul>
+        <li>Define SoD rules based on business requirements and regulations</li>
+        <li>Scan user assignments for SoD conflicts</li>
+        <li>Prioritize violations by risk level</li>
+        <li>Recommend role redesign or mitigating controls</li>
+        <li>Implement ongoing SoD monitoring</li>
+    </ul>
+    
+    <h4>Step 3: Role Optimization</h4>
+    <ul>
+        <li>Design role hierarchy (single, composite, derived roles)</li>
+        <li>Create role templates for common job functions</li>
+        <li>Document authorization concept and approval workflow</li>
+        <li>Establish periodic access review process</li>
+    </ul>
+    
+    <h3>Security Audit</h3>
+    <ul>
+        <li>Run SAP Security Notes check for missing patches</li>
+        <li>Review system parameters for security settings</li>
+        <li>Analyze user master records for dormant accounts</li>
+        <li>Check password policies and authentication settings</li>
+        <li>Review RFC destinations and trusting relationships</li>
+        <li>Assess network security and firewall rules</li>
+        <li>Verify encryption for data in transit and at rest</li>
+    </ul>
+    
+    <h3>Backup & Recovery</h3>
+    <h4>Backup Policy Design</h4>
+    <ul>
+        <li>Define RPO (Recovery Point Objective) and RTO (Recovery Time Objective) targets</li>
+        <li>Design backup schedule (full, incremental, differential)</li>
+        <li>Specify retention periods for different backup types</li>
+        <li>Document backup storage locations and media rotation</li>
+        <li>Establish backup verification procedures</li>
+    </ul>
+    
+    <h4>Backup Verification</h4>
+    <ul>
+        <li>Monitor backup job completion and success rate</li>
+        <li>Verify backup file integrity and completeness</li>
+        <li>Test restore procedures in non-production</li>
+        <li>Document restore time to validate RTO targets</li>
+        <li>Maintain backup catalog and recovery documentation</li>
+    </ul>
+    
+    <h3>Disaster Recovery Planning</h3>
+    <h4>DR Strategy</h4>
+    <ul>
+        <li>Define disaster scenarios (site failure, data corruption, ransomware)</li>
+        <li>Design DR topology (hot standby, warm standby, cold standby)</li>
+        <li>Specify RPO/RTO targets by system criticality</li>
+        <li>Document failover and failback procedures</li>
+        <li>Identify dependencies and recovery sequence</li>
+    </ul>
+    
+    <h4>DR Testing</h4>
+    <ul>
+        <li>Conduct annual DR drill to validate procedures</li>
+        <li>Measure actual recovery time against RTO targets</li>
+        <li>Identify gaps and improvement opportunities</li>
+        <li>Update DR runbook based on test results</li>
+        <li>Train team members on DR procedures</li>
+    </ul>
+</div>
+
+<div class="service-section">
+    <h2>RPO/RTO Target Examples</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>System Criticality</th>
+                <th>RPO Target</th>
+                <th>RTO Target</th>
+                <th>Backup Strategy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Critical (Production)</strong></td>
+                <td>≤ 15 minutes</td>
+                <td>≤ 4 hours</td>
+                <td>Continuous replication + daily backup</td>
+            </tr>
+            <tr>
+                <td><strong>Important (QAS)</strong></td>
+                <td>≤ 24 hours</td>
+                <td>≤ 8 hours</td>
+                <td>Daily incremental + weekly full backup</td>
+            </tr>
+            <tr>
+                <td><strong>Standard (DEV)</strong></td>
+                <td>≤ 7 days</td>
+                <td>≤ 24 hours</td>
+                <td>Weekly full backup</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Note:</strong> Actual targets defined based on business requirements and acceptable data loss/downtime.</p>
+</div>
+
+<div class="service-section">
+    <h2>Compliance Documentation</h2>
+    <p>We prepare audit-ready documentation for common regulatory frameworks:</p>
+    
+    <div class="cards-grid">
+        <div class="card">
+            <h4>SOX (Sarbanes-Oxley)</h4>
+            <ul>
+                <li>SoD matrix and conflict reports</li>
+                <li>Access review procedures</li>
+                <li>Change management controls</li>
+                <li>Audit trail configuration</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>GDPR (Data Privacy)</h4>
+            <ul>
+                <li>Personal data inventory</li>
+                <li>Data retention policies</li>
+                <li>Access logging and monitoring</li>
+                <li>Data deletion procedures</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>HIPAA (Healthcare)</h4>
+            <ul>
+                <li>PHI access controls</li>
+                <li>Encryption verification</li>
+                <li>Audit trail reports</li>
+                <li>Breach notification procedures</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>ISO 27001 (InfoSec)</h4>
+            <ul>
+                <li>Security policy documentation</li>
+                <li>Risk assessment reports</li>
+                <li>Incident response procedures</li>
+                <li>Security awareness training</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="service-section">
+    <h2>Deliverables</h2>
+    <ul>
+        <li><strong>Security Assessment Report:</strong> Findings from vulnerability scan and configuration review</li>
+        <li><strong>SoD Analysis:</strong> Conflict matrix, violation reports, and remediation recommendations</li>
+        <li><strong>Authorization Concept:</strong> Role design, naming conventions, and approval workflow</li>
+        <li><strong>Backup Policy:</strong> Schedule, retention, verification procedures, RPO/RTO targets</li>
+        <li><strong>DR Runbook:</strong> Step-by-step recovery procedures for disaster scenarios</li>
+        <li><strong>DR Test Report:</strong> Results from annual drill with measured RTO and improvement actions</li>
+        <li><strong>Compliance Documentation:</strong> Audit-ready evidence package for specific regulations</li>
+        <li><strong>Audit Trail Configuration:</strong> Security audit log settings and monitoring procedures</li>
+        <li><strong>Remediation Roadmap:</strong> Prioritized action plan for security and compliance gaps</li>
+    </ul>
+</div>
+
+<div class="service-section">
+    <h2>Annual DR Exercise</h2>
+    <p>We conduct comprehensive disaster recovery drills to validate preparedness:</p>
+    
+    <h3>Exercise Scope</h3>
+    <ul>
+        <li>Simulate realistic disaster scenario (site failure, data corruption)</li>
+        <li>Execute recovery procedures from DR runbook</li>
+        <li>Measure time to restore each system component</li>
+        <li>Validate data integrity and application functionality</li>
+        <li>Test communication and escalation procedures</li>
+        <li>Document lessons learned and improvement actions</li>
+    </ul>
+    
+    <h3>Exercise Report</h3>
+    <ul>
+        <li>Scenario description and objectives</li>
+        <li>Timeline of recovery activities</li>
+        <li>Actual vs. target RPO/RTO comparison</li>
+        <li>Issues encountered and resolutions</li>
+        <li>Gaps identified in procedures or infrastructure</li>
+        <li>Recommendations for improvement</li>
+        <li>Updated DR runbook with corrections</li>
+    </ul>
+</div>
+
+<div class="service-section">
+    <h2>Privacy & Security Principles</h2>
+    <p>Our approach to SAP system access and data handling:</p>
+    <ul>
+        <li><strong>Least Privilege:</strong> We request only the minimum access required for specific tasks</li>
+        <li><strong>Logging:</strong> All administrative actions are logged and available for audit</li>
+        <li><strong>Confidentiality:</strong> Client data is protected under NDA and not shared externally</li>
+        <li><strong>Data Minimization:</strong> We do not extract production data unless specifically required and approved</li>
+        <li><strong>Secure Communication:</strong> All remote access uses encrypted channels (VPN, SSH, HTTPS)</li>
+        <li><strong>Background Checks:</strong> Team members undergo background verification</li>
+    </ul>
+</div>
+

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Request & Maintenance Window Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; position: relative; }
+        body::before { content: ''; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 400px; height: 120px; background-image: url('/assets/images/remova-logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 0.08; pointer-events: none; z-index: -1; }
+        h1 { color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #004d99; margin-top: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 5px; }
+        h3 { color: #333; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0066cc; color: white; width: 220px; }
+        .section { background-color: #f8f9fa; padding: 15px; margin: 20px 0; border-left: 4px solid #0066cc; }
+        .warning { background-color: #fff3cd; padding: 10px; border-left: 4px solid #ffc107; margin: 10px 0; }
+        @media print { body { margin: 0; } body::before { opacity: 0.05; } }
+    </style>
+</head>
+<body>
+    <h1>Change Request & Maintenance Window Form</h1>
+    
+    <h2>1. Change Request Information</h2>
+    <table>
+        <tr>
+            <th>Change Request ID</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Change Title</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Requested By</th>
+            <td>Name: _______________ Email: _______________ Phone: _______________</td>
+        </tr>
+        <tr>
+            <th>Request Date</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Change Type</th>
+            <td>☐ Standard  ☐ Normal  ☐ Emergency</td>
+        </tr>
+        <tr>
+            <th>Change Category</th>
+            <td>☐ Patch/Update  ☐ Configuration  ☐ Infrastructure  ☐ Other: _______________</td>
+        </tr>
+    </table>
+    
+    <h2>2. Business Justification</h2>
+    <div class="section">
+        <h3>Reason for Change</h3>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Expected Benefits</h3>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Risk if Change Not Implemented</h3>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+    </div>
+    
+    <h2>3. Technical Details</h2>
+    <table>
+        <tr>
+            <th>Affected System(s)</th>
+            <td>☐ PRD  ☐ QAS  ☐ DEV  ☐ Other: _______________</td>
+        </tr>
+        <tr>
+            <th>System ID(s)</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Component(s) Affected</th>
+            <td>☐ SAP Application  ☐ Database  ☐ OS  ☐ Network  ☐ Other: _______________</td>
+        </tr>
+        <tr>
+            <th>Detailed Description</th>
+            <td>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>4. Impact Assessment</h2>
+    <div class="section">
+        <h3>System Downtime Required</h3>
+        <p>☐ Yes, estimated duration: _______________  ☐ No, online change possible</p>
+        
+        <h3>User Impact</h3>
+        <p><strong>Number of users affected:</strong> _____________</p>
+        <p><strong>Business processes affected:</strong></p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Integration Impact</h3>
+        <p><strong>Interfaces affected:</strong></p>
+        <p>_________________________________________________________________________________</p>
+        
+        <h3>Risk Level</h3>
+        <p>☐ Low  ☐ Medium  ☐ High  ☐ Critical</p>
+        <p><strong>Risk justification:</strong></p>
+        <p>_________________________________________________________________________________</p>
+    </div>
+    
+    <h2>5. Implementation Plan</h2>
+    <table>
+        <tr>
+            <th>Implementation Steps</th>
+            <td>
+                <p>1. _____________________________________________________________________</p>
+                <p>2. _____________________________________________________________________</p>
+                <p>3. _____________________________________________________________________</p>
+                <p>4. _____________________________________________________________________</p>
+                <p>5. _____________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Estimated Duration</th>
+            <td>_____ hours (from _______ to _______)</td>
+        </tr>
+        <tr>
+            <th>Implementation Team</th>
+            <td>
+                <p>Lead: _______________</p>
+                <p>Members: _________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Non-Prod Testing Status</th>
+            <td>
+                <p>☐ Tested in DEV on _______________ Result: _______________</p>
+                <p>☐ Tested in QAS on _______________ Result: _______________</p>
+                <p>☐ Not tested (Emergency change)</p>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>6. Rollback Plan</h2>
+    <div class="warning">
+        <strong>⚠ REQUIRED:</strong> All production changes must have a documented rollback procedure.
+    </div>
+    
+    <table>
+        <tr>
+            <th>Rollback Procedure</th>
+            <td>
+                <p>1. _____________________________________________________________________</p>
+                <p>2. _____________________________________________________________________</p>
+                <p>3. _____________________________________________________________________</p>
+                <p>4. _____________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Rollback Duration</th>
+            <td>_____ hours</td>
+        </tr>
+        <tr>
+            <th>Rollback Decision Criteria</th>
+            <td>
+                <p>Change will be rolled back if:</p>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Rollback Authority</th>
+            <td>Name: _______________ Phone: _______________</td>
+        </tr>
+        <tr>
+            <th>Decision Timeline</th>
+            <td>Go/No-Go decision must be made within _____ minutes of completion</td>
+        </tr>
+    </table>
+    
+    <h2>7. Validation Plan</h2>
+    <table>
+        <tr>
+            <th>Validation Steps</th>
+            <td>
+                <p>1. _____________________________________________________________________</p>
+                <p>2. _____________________________________________________________________</p>
+                <p>3. _____________________________________________________________________</p>
+                <p>4. _____________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Success Criteria</th>
+            <td>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Validation Owner</th>
+            <td>Name: _______________ Role: _______________</td>
+        </tr>
+    </table>
+    
+    <h2>8. Maintenance Window Request</h2>
+    <table>
+        <tr>
+            <th>Proposed Date</th>
+            <td>_______________ (Day: ☐ Weekday  ☐ Weekend)</td>
+        </tr>
+        <tr>
+            <th>Start Time</th>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <th>End Time</th>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <th>Alternative Date</th>
+            <td>_______________ (in case primary date not approved)</td>
+        </tr>
+        <tr>
+            <th>Change Freeze Check</th>
+            <td>
+                <p>☐ Confirmed: Not during month-end, quarter-end, or business critical period</p>
+                <p>☐ Exception required - Justification: _____________________________________</p>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>9. Communication Plan</h2>
+    <table>
+        <tr>
+            <th>Stakeholders to Notify</th>
+            <td>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Notification Timeline</th>
+            <td>
+                <p>☐ 5 business days advance notice sent on: _______________</p>
+                <p>☐ 24 hours reminder sent on: _______________</p>
+                <p>☐ Start notification: _______________</p>
+                <p>☐ Completion notification: _______________</p>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>10. Approvals</h2>
+    <table>
+        <tr>
+            <th>Technical Review</th>
+            <td>
+                <p>Name: ____________________  Role: ____________________</p>
+                <p>Signature: ____________________  Date: __________</p>
+                <p>☐ Approved  ☐ Approved with conditions  ☐ Rejected</p>
+                <p>Comments: _________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Change Manager</th>
+            <td>
+                <p>Name: ____________________  Role: ____________________</p>
+                <p>Signature: ____________________  Date: __________</p>
+                <p>☐ Approved  ☐ Approved with conditions  ☐ Rejected</p>
+                <p>Comments: _________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Business Owner</th>
+            <td>
+                <p>Name: ____________________  Role: ____________________</p>
+                <p>Signature: ____________________  Date: __________</p>
+                <p>☐ Approved  ☐ Approved with conditions  ☐ Rejected</p>
+                <p>Comments: _________________________________________________________________</p>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>11. Post-Implementation</h2>
+    <table>
+        <tr>
+            <th>Actual Start Time</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Actual End Time</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Change Status</th>
+            <td>☐ Successful  ☐ Successful with issues  ☐ Rolled back  ☐ Failed</td>
+        </tr>
+        <tr>
+            <th>Validation Results</th>
+            <td>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Issues Encountered</th>
+            <td>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Lessons Learned</th>
+            <td>
+                <p>_________________________________________________________________________</p>
+                <p>_________________________________________________________________________</p>
+            </td>
+        </tr>
+    </table>
+    
+    <p style="margin-top: 40px; font-size: 12px; color: #666;">
+        <strong>Remova Inc.</strong> | www.teamremova.org | contact@teamremova.org<br>
+        This template is provided as a guide. Adapt as needed for your specific change management process.
+    </p>
+</body>
+</html>
+

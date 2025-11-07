@@ -1,0 +1,6 @@
+<div class="cta-button-wrapper">
+    <a href="mailto:{{ include.email | default: site.email }}?subject={{ include.subject | url_encode }}" class="cta-button">
+        {{ include.text | default: "Get Started" }}
+    </a>
+</div>
+

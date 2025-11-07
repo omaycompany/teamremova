@@ -1,0 +1,163 @@
+---
+layout: page
+title: "Contact Us"
+subtitle: "Get a quote or schedule a technical discovery call"
+---
+
+<section class="section">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2>Get a Quote</h2>
+            <p>Complete the form below to request a detailed proposal. We'll use this information to prepare a customized quote with specific SLA commitments and deliverables.</p>
+            
+            <form id="contact-form" data-email="notifications@removateam.org">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="landscapes">System Landscapes *</label>
+                    <input type="text" id="landscapes" name="landscapes" required placeholder="e.g., Production, Quality, Development">
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-count">Approximate User Count</label>
+                    <input type="number" id="user-count" name="user-count" placeholder="e.g., 500">
+                </div>
+                
+                <div class="form-group">
+                    <label for="sap-version">SAP Version</label>
+                    <input type="text" id="sap-version" name="sap-version" placeholder="e.g., ECC 6.0 EHP7, S/4HANA 2021">
+                </div>
+                
+                <div class="form-group">
+                    <label for="database">Database Platform</label>
+                    <input type="text" id="database" name="database" placeholder="e.g., HANA, Oracle, SQL Server">
+                </div>
+                
+                <div class="form-group">
+                    <label for="infrastructure">Infrastructure</label>
+                    <input type="text" id="infrastructure" name="infrastructure" placeholder="e.g., On-premise, Azure, AWS">
+                </div>
+                
+                <div class="form-group">
+                    <label for="rpo-rto">RPO/RTO Requirements</label>
+                    <input type="text" id="rpo-rto" name="rpo-rto" placeholder="e.g., RPO 1 hour, RTO 4 hours">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service-interest">Service Interest *</label>
+                    <select id="service-interest" name="service-interest" required>
+                        <option value="">-- Select Primary Interest --</option>
+                        <option value="AMS Support">SAP AMS (24/7 Support & Maintenance)</option>
+                        <option value="Basis Consulting">SAP Basis Consulting</option>
+                        <option value="Install Upgrade">Install & Upgrade Services</option>
+                        <option value="S4HANA Transformation">S/4HANA Transformation</option>
+                        <option value="Performance Improvement">Performance Improvement</option>
+                        <option value="Security Compliance">Security & Compliance</option>
+                        <option value="Multiple Services">Multiple Services</option>
+                        <option value="Not Sure">Not Sure / Need Consultation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="planned-projects">Planned Projects or Immediate Needs</label>
+                    <textarea id="planned-projects" name="planned-projects" rows="4" placeholder="Describe any upcoming projects, immediate issues, or specific requirements..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeline">Desired Start Timeline</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">-- Select Timeline --</option>
+                        <option value="Immediate">Immediate / Emergency</option>
+                        <option value="1-2 weeks">1-2 weeks</option>
+                        <option value="1 month">Within 1 month</option>
+                        <option value="2-3 months">2-3 months</option>
+                        <option value="Planning">Planning stage / No rush</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additional-info">Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" rows="3" placeholder="Any other details that would help us prepare an accurate proposal..."></textarea>
+                </div>
+                
+                <input type="hidden" name="subject" value="Quote Request from Website">
+                
+                <div class="cta-button-wrapper">
+                    <button type="submit" class="cta-button">Submit Quote Request</button>
+                </div>
+                
+                <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                    * Required fields. By submitting this form, you consent to us contacting you about our services. We will not share your information with third parties.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2>Alternative: Schedule a Technical Discovery Call</h2>
+            <p>Prefer to discuss your requirements in person? We offer a free 45-minute technical discovery call where we:</p>
+            <ul>
+                <li>Understand your current SAP landscape and challenges</li>
+                <li>Discuss your operational requirements and priorities</li>
+                <li>Explain how our services align with your needs</li>
+                <li>Answer your questions about our approach and methodology</li>
+                <li>Provide initial recommendations at no cost</li>
+            </ul>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                {% include cta.html text="Request Discovery Call" email="notifications@removateam.org" subject="Technical Discovery Call Request" %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2>Direct Contact</h2>
+            <p>You can also reach us directly:</p>
+            
+            <div style="background-color: var(--background-light); padding: 2rem; border-radius: var(--border-radius); margin: 2rem 0;">
+                <p><strong>Email:</strong> <a href="mailto:notifications@removateam.org">notifications@removateam.org</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+13512150442">+1 351 215-0442</a></p>
+                <p><strong>Address:</strong><br>
+                1111B S Governors Ave<br>
+                STE 39322<br>
+                Dover, DE 19904</p>
+                <p><strong>Response Time:</strong> Within 24 hours</p>
+            </div>
+            
+            <h3>What Happens Next?</h3>
+            <ol>
+                <li><strong>Initial Response (1 business day):</strong> We'll acknowledge your request and schedule a brief call if needed</li>
+                <li><strong>Proposal Preparation (3-5 business days):</strong> We'll prepare a detailed proposal with specific services, SLAs, and approach</li>
+                <li><strong>Proposal Review:</strong> We'll walk through the proposal with you and answer questions</li>
+                <li><strong>Contract & Onboarding (1-2 weeks):</strong> Once approved, we execute contract and begin onboarding</li>
+            </ol>
+            
+            <p style="margin-top: 2rem;">For emergency situations requiring immediate support, please indicate "Emergency" in the timeline field and we'll prioritize your request.</p>
+        </div>
+    </div>
+</section>
+

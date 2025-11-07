@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAP Basis Health Checklist</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 20px; 
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 400px;
+            height: 120px;
+            background-image: url('/assets/images/remova-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: -1;
+        }
+        h1 { color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #004d99; margin-top: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 5px; }
+        h3 { color: #333; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0066cc; color: white; }
+        tr:nth-child(even) { background-color: #f8f9fa; }
+        .checkbox { width: 80px; text-align: center; }
+        .header-info { background-color: #f8f9fa; padding: 15px; margin-bottom: 20px; border-left: 4px solid #0066cc; }
+        @media print { 
+            body { margin: 0; }
+            body::before { opacity: 0.05; }
+        }
+    </style>
+</head>
+<body>
+    <h1>SAP Basis Health Checklist</h1>
+    
+    <div class="header-info">
+        <p><strong>System ID:</strong> ___________________ <strong>Date:</strong> ___________________</p>
+        <p><strong>Performed by:</strong> ___________________ <strong>Client:</strong> ___________________</p>
+    </div>
+    
+    <h2>1. System Landscape</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Check Item</th>
+                <th>Status</th>
+                <th class="checkbox">OK</th>
+                <th class="checkbox">Issue</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>System landscape documented (PRD/QAS/DEV)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Architecture diagrams current and accurate</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SAP version and patch level documented</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Database version and patch level documented</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>OS version and patch level documented</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Transport routes configured correctly</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>2. Performance Metrics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Check Item</th>
+                <th>Current Value</th>
+                <th class="checkbox">OK</th>
+                <th class="checkbox">Issue</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Average dialog response time (ST03N)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td>Target: &lt; 1 second</td>
+            </tr>
+            <tr>
+                <td>CPU utilization (peak)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td>Target: &lt; 80%</td>
+            </tr>
+            <tr>
+                <td>Memory utilization (peak)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td>Target: &lt; 85%</td>
+            </tr>
+            <tr>
+                <td>Database time percentage (ST03N)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td>Target: &lt; 40%</td>
+            </tr>
+            <tr>
+                <td>Swap usage</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td>Target: minimal/none</td>
+            </tr>
+            <tr>
+                <td>Disk I/O wait time</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td>Target: &lt; 5%</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>3. Security Audit</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Check Item</th>
+                <th>Status</th>
+                <th class="checkbox">OK</th>
+                <th class="checkbox">Issue</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Security patches up to date</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Password policy configured (login/password_security)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>No default passwords in use (SAP*, DDIC)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dormant user accounts locked or deleted</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Security audit log active (SM19/SM20)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>RFC destinations secured (SM59)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Segregation of Duties (SoD) conflicts reviewed</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>4. Backup Verification</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Check Item</th>
+                <th>Status</th>
+                <th class="checkbox">OK</th>
+                <th class="checkbox">Issue</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Daily backup jobs completing successfully</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Backup logs reviewed for errors</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Backup retention policy documented</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Restore test performed in last 6 months</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Backup storage capacity adequate</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Off-site backup copy maintained</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>5. Patch Status</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Current Version</th>
+                <th>Latest Version</th>
+                <th class="checkbox">Current</th>
+                <th class="checkbox">Update Needed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SAP Kernel</td>
+                <td></td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+            </tr>
+            <tr>
+                <td>SAP Support Packages</td>
+                <td></td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+            </tr>
+            <tr>
+                <td>Database Version</td>
+                <td></td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+            </tr>
+            <tr>
+                <td>Operating System Patches</td>
+                <td></td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>6. System Monitoring</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Check Item</th>
+                <th>Status</th>
+                <th class="checkbox">OK</th>
+                <th class="checkbox">Issue</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>System monitoring tools configured (CCMS/Solution Manager)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alert notifications configured and tested</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>System logs reviewed regularly (SM21)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Database alert log reviewed regularly</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dump analysis performed (ST22)</td>
+                <td></td>
+                <td class="checkbox">☐</td>
+                <td class="checkbox">☐</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Summary</h2>
+    <div class="header-info">
+        <p><strong>Total Items Checked:</strong> _____ <strong>OK:</strong> _____ <strong>Issues Found:</strong> _____</p>
+        <p><strong>Critical Issues Requiring Immediate Action:</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        <p><strong>Recommendations:</strong></p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+        <p>_________________________________________________________________________________</p>
+    </div>
+    
+    <p style="margin-top: 40px; font-size: 12px; color: #666;">
+        <strong>Remova Inc.</strong> | www.teamremova.org | contact@teamremova.org<br>
+        This template is provided as a guide. Adapt as needed for your specific environment.
+    </p>
+</body>
+</html>
+

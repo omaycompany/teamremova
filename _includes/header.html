@@ -1,0 +1,40 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/images/remova-logo.png' | relative_url }}" alt="Remova Inc." class="logo-image">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="#services">Services <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown">
+                            <li><a href="{{ '/services/sap-basis-consulting' | relative_url }}">SAP Basis Consulting</a></li>
+                            <li><a href="{{ '/services/sap-ams' | relative_url }}">SAP AMS (24/7 Support)</a></li>
+                            <li><a href="{{ '/services/install-upgrade' | relative_url }}">Install & Upgrade</a></li>
+                            <li><a href="{{ '/services/s4hana-transformation' | relative_url }}">S/4HANA Transformation</a></li>
+                            <li><a href="{{ '/services/performance-improvement' | relative_url }}">Performance Improvement</a></li>
+                            <li><a href="{{ '/services/security-compliance' | relative_url }}">Security & Compliance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ '/methodology' | relative_url }}">Methodology</a></li>
+                    <li><a href="{{ '/resources' | relative_url }}">Resources</a></li>
+                    <li><a href="{{ '/industries' | relative_url }}">Industries</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}" class="nav-cta">Get a Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
