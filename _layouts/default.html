@@ -5,7 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ page.description | default: site.description }}">
     <title>{{ page.title | default: site.title }}</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/remova-logo.png">
+    <meta property="og:site_name" content="{{ site.company_name }}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/remova-logo.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="{{ site.company_name }}">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="US-DE">
+    <meta name="geo.placename" content="Dover">
+    <meta name="geo.position" content="39.1582;-75.5244">
+    <meta name="ICBM" content="39.1582, -75.5244">
+    
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTJN9JC6QZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TTJN9JC6QZ');
+    </script>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{ site.company_name }}",
+      "alternateName": "Remova Team",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/images/remova-logo.png",
+      "description": "{{ site.description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1111B S Governors Ave, STE 39322",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "postalCode": "19904",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-351-215-0442",
+        "contactType": "Customer Service",
+        "email": "{{ site.email }}",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "{{ site.url }}"
+      ],
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "SAP Basis Consulting",
+        "SAP AMS (24/7 Support)",
+        "S/4HANA Transformation",
+        "SAP System Installation and Upgrade",
+        "SAP Performance Improvement",
+        "SAP Security and Compliance"
+      ],
+      "foundingDate": "2010",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "6"
+      }
+    }
+    </script>
+    
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "{{ site.company_name }}",
+      "image": "{{ site.url }}/assets/images/remova-logo.png",
+      "description": "{{ site.description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1111B S Governors Ave, STE 39322",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "postalCode": "19904",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.1582,
+        "longitude": -75.5244
+      },
+      "url": "{{ site.url }}",
+      "telephone": "+1-351-215-0442",
+      "email": "{{ site.email }}",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Worldwide"
+      },
+      "serviceType": "SAP Basis Consulting and Managed Services"
+    }
+    </script>
 </head>
 <body>
     {% include header.html %}
@@ -17,6 +133,20 @@
     {% include footer.html %}
     
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6911d7da50ba1a195e0a2bb7/1j9mr6cbn';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
 

@@ -1,11 +1,11 @@
 # Site settings
 title: "Remova Inc. - SAP Basis Consulting"
 description: "Your SAP is fast, secure, and always available. Professional SAP Basis consulting, 24/7 support, and S/4HANA transformation services."
-url: "https://www.teamremova.org"
+url: "https://www.removateam.org"
 baseurl: ""
 
 # Company information
-email: "contact@teamremova.org"
+email: "notifications@removateam.org"
 company_name: "Remova Inc."
 company_tagline: "Your SAP is fast, secure, and always available"
 
