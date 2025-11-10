@@ -14,7 +14,9 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <meta property="og:title" content="{{ page.title | default: site.title }}">
     <meta property="og:description" content="{{ page.description | default: site.description }}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/remova-logo.png">
+    <meta property="og:image" content="{{ site.url }}/assets/images/remova-logo.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:fallback" content="{{ site.url }}/assets/images/remova-logo.png">
     <meta property="og:site_name" content="{{ site.company_name }}">
     
     <!-- Twitter Card -->
@@ -22,7 +24,7 @@
     <meta name="twitter:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <meta name="twitter:title" content="{{ page.title | default: site.title }}">
     <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/remova-logo.png">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/remova-logo.webp">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="author" content="{{ site.company_name }}">
@@ -53,7 +55,7 @@
       "name": "{{ site.company_name }}",
       "alternateName": "Remova Team",
       "url": "{{ site.url }}",
-      "logo": "{{ site.url }}/assets/images/remova-logo.png",
+      "logo": "{{ site.url }}/assets/images/remova-logo.webp",
       "description": "{{ site.description }}",
       "address": {
         "@type": "PostalAddress",
@@ -96,7 +98,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "{{ site.company_name }}",
-      "image": "{{ site.url }}/assets/images/remova-logo.png",
+      "image": "{{ site.url }}/assets/images/remova-logo.webp",
       "description": "{{ site.description }}",
       "address": {
         "@type": "PostalAddress",

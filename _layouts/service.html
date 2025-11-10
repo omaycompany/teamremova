@@ -13,7 +13,10 @@ layout: default
             </div>
             <div class="service-header-image">
                 {% if page.slug %}
-                <img src="{{ '/assets/images/service-' | append: page.slug | append: '.png' | relative_url }}" alt="{{ page.title }}" class="service-visual">
+                <picture>
+                    <source srcset="{{ '/assets/images/service-' | append: page.slug | append: '.webp' | relative_url }}" type="image/webp">
+                    <img src="{{ '/assets/images/service-' | append: page.slug | append: '.png' | relative_url }}" alt="{{ page.title }}" class="service-visual">
+                </picture>
                 {% else %}
                 <div class="image-placeholder" data-image="service-{{ page.slug }}">
                     <span>Service Visual</span>

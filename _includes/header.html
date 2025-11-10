@@ -3,7 +3,10 @@
         <div class="header-content">
             <div class="logo">
                 <a href="{{ '/' | relative_url }}">
-                    <img src="{{ '/assets/images/remova-logo.png' | relative_url }}" alt="Remova Inc." class="logo-image">
+                    <picture>
+                        <source srcset="{{ '/assets/images/remova-logo.webp' | relative_url }}" type="image/webp">
+                        <img src="{{ '/assets/images/remova-logo.png' | relative_url }}" alt="Remova Inc." class="logo-image">
+                    </picture>
                 </a>
             </div>
             

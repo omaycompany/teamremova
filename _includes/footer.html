@@ -2,7 +2,10 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-section footer-logo-section">
-                <img src="{{ '/assets/images/remova-logo.png' | relative_url }}" alt="Remova Inc." class="footer-logo">
+                <picture>
+                    <source srcset="{{ '/assets/images/remova-logo.webp' | relative_url }}" type="image/webp">
+                    <img src="{{ '/assets/images/remova-logo.png' | relative_url }}" alt="Remova Inc." class="footer-logo">
+                </picture>
                 <p style="margin-top: 1rem;">Professional SAP Basis consulting with transparent SLA commitments</p>
             </div>
             
